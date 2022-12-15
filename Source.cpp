@@ -16,12 +16,13 @@ T triangle<T>::get_c()
 {
 	return c;
 }
-
-double triangle<double>::perimetr()
+template <typename T>
+double triangle<T>::perimetr()
 {
 	return (double)(a + b + c);
 }
-double triangle<double>::area()
+template <typename T>
+double triangle<T>::area()
 {
 	double p = perimetr()/2;
 	return sqrt(p * (p - a) * (p - b) * (p - c));
